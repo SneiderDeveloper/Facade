@@ -1,9 +1,9 @@
 public class Falcon9 {
 
-    public MotorMerlin motorMerlin;
-    public Combustible combustible;
-    public Posicion posicion;
-    public EstadoMotor estadoMotor;
+    private MotorMerlin motorMerlin;
+    private Combustible combustible;
+    private Posicion posicion;
+    private EstadoMotor estadoMotor;
 
     public Falcon9(MotorMerlin motorMerlin, 
                     Combustible combustible, 
