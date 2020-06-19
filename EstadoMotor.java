@@ -12,16 +12,16 @@ public class EstadoMotor {
     
     public boolean verificarEstado() {
 
-        boolean ok = false;
+        boolean listo = false;
 
         for (int i = 0; i <=8; i++){
             if (merlinUno.temperatura <= 70.1 && merlinUno.temperatura >= 100.0 ) {
-                ok = !ok;
+                listo = !listo;
             } else {
                 System.out.println("Abortar. Fallo en el motor, temperatura alta: " + merlinUno.temperatura);
             }
             if (merlinUno.presion <= 9.0 && merlinUno.presion >= 10.0 ) {
-                ok = !ok;
+                listo = !listo;
             } else {
             System.out.println("Abortar. Fallo en el motor, presión alta: " + merlinUno.presion);
             }
@@ -30,6 +30,6 @@ public class EstadoMotor {
         merlinUno.obtenerPresion(4.7f);
         System.out.println(merlinUno.temperatura);
         System.out.println(merlinUno.presion);
-        return ok;
+        return listo;
     }
 }
