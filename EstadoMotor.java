@@ -21,7 +21,9 @@ public class EstadoMotor {
                 System.out.println("Abortar. Fallo en el motor");
             }
             if (merlinUno.presion <= 9.0 && merlinUno.presion >= 10.0 ) {
-                System.out.println("Abortar. Fallo en el motor");
+                ok = !ok;
+            } else {
+            System.out.println("Abortar. Fallo en el motor");
             }
         }
         merlinUno.obtenerTemperatura(2.7f);
