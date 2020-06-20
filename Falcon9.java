@@ -1,22 +1,18 @@
 public class Falcon9 {
 
-    private MotorMerlin motorMerlin;
     private Combustible combustible;
     private Posicion posicion;
     private EstadoMotor estadoMotor;
 
-    public Falcon9(MotorMerlin motorMerlin, 
+    public Falcon9( 
                     Combustible combustible, 
                     Posicion posicion, 
-                    EstadoMotor estadoMotor){
+                    EstadoMotor estadoMotor
+                    ){
 
-        this.motorMerlin = motorMerlin;
         this.combustible = combustible;
+        this.estadoMotor = estadoMotor;
         this.posicion = posicion;
-    }
-
-    public MotorMerlin gMotorMerlin() {
-        return motorMerlin;
     }
 
     public Combustible gCombustible() {
