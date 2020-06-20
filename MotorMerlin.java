@@ -1,20 +1,20 @@
 
 public class MotorMerlin {
 
-    public float temperatura;
-    public float presion;
+    public Double temperatura;
+    public Double presion;
 
     //Camara de combustión
-    public float obtenerTemperatura(float datosSensorTemperatura) {
+    public Double obtenerTemperatura(Double datosSensorTemperatura) {
         this.temperatura = datosSensorTemperatura;
         return temperatura;
     }
 
-    public float obtenerPresion(float datosSensorPresion) {
+    public Double obtenerPresion(Double datosSensorPresion) {
         this.presion = datosSensorPresion;
         return presion;
     }
 
-    
+
     
 }
