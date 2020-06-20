@@ -5,23 +5,26 @@ public class Facade {
     Posicion posicion = new Posicion();
     Falcon9 falconNine = new Falcon9(combustible, posicion, estadoMotor);
     
+    boolean combustibleListo = falconNine.gCombustible().verificarEstadoCombustible();
+    boolean motorListo = falconNine.gEstadoMotor().verificarEstado();
+    boolean posicionCorrecta = falconNine.gPosicion().verificarInclinacion();
 
-    public void listo() {
-        falconNine.gCombustible().obtenerQueroseno(100.0);
-        falconNine.gCombustible().obtenerOxidante(100.0);
-        boolean combustibleListo = falconNine.gCombustible().verificarEstadoCombustible();
-        System.out.println("Estado combustible: " + combustibleListo);
-       
-        boolean motorListo = falconNine.gEstadoMotor().verificarEstado();
-        System.out.println("Estado motores: " + motorListo);
+    public void estadoFalconNine() {
+        if (combustibleListo && motorListo && posicionCorrecta) {
+            despegar();
+        } else {
+            abortar();
+        }
+    }
 
-        falconNine.gPosicion().obtenerGravitacion(0.0);
-        boolean posicionCorrecta = falconNine.gPosicion().verificarInclinacion();
-        System.out.println("Estado posición: " + posicionCorrecta);
+    public void despegar() {
+        System.out.println("Motores y combustible listos para el despegue.");
     }
 
     public void abortar() {
-        
+        System.out.println("Estado combustible: " + combustibleListo);
+        System.out.println("Estado motores: " + motorListo);
+        System.out.println("Estado posición: " + posicionCorrecta);
     }
     
 

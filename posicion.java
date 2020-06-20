@@ -7,6 +7,7 @@ public class Posicion {
     }
 
     public boolean verificarInclinacion() {
+        obtenerGravitacion(0.0);
         boolean listo = false;
         if (inclinacionGrados == 0.0) {
             listo = !listo;

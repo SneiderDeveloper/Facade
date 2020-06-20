@@ -12,6 +12,8 @@ public class Combustible {
     }
 
     public boolean verificarEstadoCombustible() {
+        obtenerQueroseno(100.0);
+        obtenerOxidante(100.0);
         boolean listo = false;
         if ((queroseno == 100.0) && (oxigeno == 100.0)){
             listo = !listo;
