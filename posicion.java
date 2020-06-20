@@ -1,14 +1,14 @@
 public class Posicion {
 
-    public float inclinacionGrados;
+    public Double inclinacionGrados;
     
-    public void obtenerGravitacion(float datosSensorGravitacional) {
+    public void obtenerGravitacion(Double datosSensorGravitacional) {
         this.inclinacionGrados = datosSensorGravitacional;
     }
 
     public boolean verificarInclinacion() {
         boolean listo = false;
-        if (inclinacionGrados == 0) {
+        if (inclinacionGrados == 0.0) {
             listo = !listo;
         } else {
             System.out.println("Cochete "  + inclinacionGrados + 
