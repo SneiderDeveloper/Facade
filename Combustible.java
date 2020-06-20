@@ -1,30 +1,24 @@
 public class Combustible {
 
-    public float queroseno;
-    public float oxigeno;
+    public Double queroseno;
+    public Double oxigeno;
     
-    public void verificarQueroseno(float nivelQueroseno) {
+    public void obtenerQueroseno(Double nivelQueroseno) {
         this.queroseno = nivelQueroseno;
     }
 
-    public void verificarOxigenoLiquido(float nivelOxigenoLiquido) {
+    public void obtenerOxidante(Double nivelOxigenoLiquido) {
         this.oxigeno = nivelOxigenoLiquido;
     }
 
     public boolean verificarEstadoCombustible() {
         boolean listo = false;
-        if (queroseno == 100.0){
+        if ((queroseno == 100.0) && (oxigeno == 100.0)){
             listo = !listo;
         } else {
             System.out.println("Tanque de queroseno en: " + queroseno);
-        }
-
-        if (oxigeno == 100.0) {
-            listo = !listo;
-        } else {
             System.out.println("Tanque de oxigeno en: " + oxigeno);
         }
-
         return listo;
     }
 }
